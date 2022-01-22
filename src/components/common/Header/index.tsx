@@ -1,25 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import style from "./Header.module.scss";
 
 const Header: React.FC = () => {
+  console.log("render");
+
   return (
     <header className={style["wrapper-example"]}>
-      <Link to="/">
+      <NavLink to="/">
         <div className={style.logo}>
           <img src="/logo.png" alt="logo" />
         </div>
-      </Link>
+      </NavLink>
       <nav>
         <ul className={style.menu_list}>
           <li>
-            <Link to="/">Main</Link>
+            <NavLink to="/">Main</NavLink>
           </li>
           <li>
-            <Link to="/posts">Posts</Link>
+            <NavLink to="/posts">Posts</NavLink>
           </li>
           <li>
-            <Link to="/registration">Registration</Link>
+            <NavLink to="/registration">Registration</NavLink>
           </li>
         </ul>
       </nav>
